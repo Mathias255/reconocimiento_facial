@@ -1,0 +1,41 @@
+{
+  "proyecto": "control_asistencia_gimnasio",
+  "version": "1.1.0",
+  "fecha_exportacion_utc": "2026-10-19T21:55:24.523700+00:00",
+  "modelo": "Facenet512",
+  "detector": "mtcnn",
+  "align": true,
+  "normalization_deepface": "base",
+  "modelo_preentrenado": true,
+  "requiere_entrenamiento": false,
+  "embedding_dim": 512,
+  "embedding_normalizado_l2": true,
+  "distancia": "cosine",
+  "estrategia": "todos_min",
+  "regla_aceptacion": "distancia_minima <= umbral",
+  "umbral": 0.26,
+  "preprocesamiento": {
+    "max_lado_imagen": 1280,
+    "min_lado_rostro": 80,
+    "confianza_minima": 0.9,
+    "brillo_admitido": [
+      35,
+      235
+    ],
+    "nitidez_minima": 15.0
+  },
+  "galeria": {
+    "personas": 7,
+    "embeddings": 109,
+    "origen": "particion_matricular_sin_validacion_ni_prueba"
+  },
+  "negocio": {
+    "ventana_duplicado_minutos": 5,
+    "estados_asistencia": [
+      "ACCEPTED",
+      "REJECTED",
+      "DUPLICATE"
+    ]
+  },
+  "deepface_version": "0.0.101"
+}
